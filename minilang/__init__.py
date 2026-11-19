@@ -1,9 +1,10 @@
-"""MiniLang: lexer e parser."""
+"""MiniLang: lexer, parser e analisador semântico."""
 
 from minilang.ast import (
     Atribuicao,
     Binaria,
     Bloco,
+    Booleano,
     Declaracao,
     Enquanto,
     Inteiro,
@@ -15,14 +16,24 @@ from minilang.ast import (
 from minilang.diagnostics import Diagnostico
 from minilang.lexer import Lexer, tokenizar
 from minilang.parser import Parser, parsear
+from minilang.semantic import (
+    AnalisadorSemantico,
+    DiagnosticoSemantico,
+    Simbolo,
+    TabelaSimbolos,
+    Tipo,
+)
 from minilang.tokens import PALAVRAS_RESERVADAS, Token, TokenType
 
 __all__ = [
+    "AnalisadorSemantico",
     "Atribuicao",
     "Binaria",
     "Bloco",
+    "Booleano",
     "Declaracao",
     "Diagnostico",
+    "DiagnosticoSemantico",
     "Enquanto",
     "Inteiro",
     "Lexer",
@@ -31,6 +42,9 @@ __all__ = [
     "Programa",
     "Saida",
     "Se",
+    "Simbolo",
+    "TabelaSimbolos",
+    "Tipo",
     "Token",
     "TokenType",
     "Variavel",

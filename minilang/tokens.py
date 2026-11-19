@@ -5,16 +5,23 @@ from enum import Enum
 
 
 class TokenType(Enum):
-    """As 24 categorias de token produzidas pelo lexer."""
+    """Categorias de token produzidas pelo lexer."""
 
     # KEYWORD_CORE
     KW_INT = "KW_INT"
+    KW_BOOL = "KW_BOOL"
     KW_PRINT = "KW_PRINT"
 
     # KEYWORD_EXT
     KW_IF = "KW_IF"
     KW_ELSE = "KW_ELSE"
     KW_WHILE = "KW_WHILE"
+
+    # BOOLEANOS E LÓGICOS
+    KW_TRUE = "KW_TRUE"
+    KW_FALSE = "KW_FALSE"
+    KW_AND = "KW_AND"
+    KW_OR = "KW_OR"
 
     # IDENT_BASE e INT_LITERAL
     IDENT = "IDENT"
@@ -52,10 +59,19 @@ class TokenType(Enum):
 
 PALAVRAS_RESERVADAS = {
     "int": TokenType.KW_INT,
+    "bool": TokenType.KW_BOOL,
     "print": TokenType.KW_PRINT,
     "if": TokenType.KW_IF,
     "else": TokenType.KW_ELSE,
     "while": TokenType.KW_WHILE,
+    "True": TokenType.KW_TRUE,
+    "true": TokenType.KW_TRUE,
+    "False": TokenType.KW_FALSE,
+    "false": TokenType.KW_FALSE,
+    "AND": TokenType.KW_AND,
+    "and": TokenType.KW_AND,
+    "OR": TokenType.KW_OR,
+    "or": TokenType.KW_OR,
 }
 
 

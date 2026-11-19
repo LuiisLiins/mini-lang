@@ -1,0 +1,17 @@
+int total;
+total = 10;
+{
+    int limite;
+    bool acima;
+    limite = 5;
+    acima = total > limite;
+    total = limite + acima;
+    total = acima;
+    {
+        int teste;
+        int teste2;
+        print(total);
+    }
+}
+print(acima);
+int total;
